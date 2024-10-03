@@ -1,0 +1,112 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode (default) */
+:root {
+    --bg-color: white;
+    --text-color: black;
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  /* Dark mode */
+  body.dark {
+    --bg-color: #1f2937;
+    --text-color: #f9fafb;
+  }
+
+  /* COMMON MODAL START */
+.app-common-modal {
+    display: none;
+  }
+  
+  .app-common-modal .jw-modal {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+  
+  .app-common-modal .jw-modal .jw-modal-body {
+    padding: 20px;
+    background: #fff;
+    overflow-y: auto;
+    /* Height 100% breaks the scroll bar, limit to 99% */
+    max-height: 99%;
+    overflow-x: hidden;
+  }
+  
+  
+  .jw-modal ::-webkit-scrollbar {
+    background: #909090;
+    width: 5px;
+    height: 8px;
+  }
+  
+  .jw-modal::-webkit-scrollbar-thumb {
+    background: #c9c8c8;
+  }
+  
+  .app-common-modal .jw-modal-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 900;
+  }
+  
+  body.jw-modal-open {
+    overflow-y: hidden !important;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .jw-modal h4 {
+    font-size: 1.2rem;
+  }
+  
+  .jw-modal .title-modal {
+    border-bottom: 1px solid #e3eaef;
+    padding-bottom: 10px;
+  }
+  
+  .new-common-modal .jw-modal .jw-modal-body {
+    overflow-y: auto;
+    overflow-x: auto;
+  }
+  
+  bs-datepicker-container,
+  bs-daterangepicker-container {
+    z-index: 999999999 !important;
+  }
+  
+  .fsForm .fsSubmit {
+    padding: 0 !important;
+  }
+  
+  .ngx-file-drop__content {
+    width: 100%;
+  }
+  
+  .app-common-modal#view-image-modal .jw-modal-background {
+    z-index: 99999;
+  }
+  
+  #view-image-modal .jw-modal {
+    z-index: 999999;
+  }
+  
+  /* COMMON MODAL END */
