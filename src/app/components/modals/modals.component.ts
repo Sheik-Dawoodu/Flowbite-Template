@@ -1,16 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit } from '@angular/core';
 import { initFlowbite } from 'flowbite';
 import { ModalService } from '../../service/modal.service';
+import { HeaderComponent } from "../header/header.component";
 import { ModalComponent } from "../shared/modal/modal.component";
 import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { SidebarComponent } from "../shared/sidebar/sidebar.component";
 
+
 @Component({
   selector: 'app-modals',
   standalone: true,
-  imports: [SidebarComponent, ModalComponent, NavbarComponent],
+  imports: [SidebarComponent, ModalComponent, NavbarComponent, HeaderComponent],
   templateUrl: './modals.component.html',
-  styleUrl: './modals.component.css'
+  styleUrl: './modals.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 })
 export class ModalsComponent implements OnInit{
 
