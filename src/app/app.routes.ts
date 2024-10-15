@@ -4,11 +4,11 @@ export const routes: Routes = [
   
   {
     path: '',
-    loadComponent: () => import('./components/modals/modals.component').then(m => m.ModalsComponent)
+    loadComponent: () => import('./components/auth/login/login.component').then(m => m.LoginComponent)
   },
   {
-    path: 'test',
-    loadComponent: () => import('./components/auth/login/login.component').then(m => m.LoginComponent)
+    path: 'home',
+    loadComponent: () => import('./components/modals/modals.component').then(m => m.ModalsComponent)
   },
  
 

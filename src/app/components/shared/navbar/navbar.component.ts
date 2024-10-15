@@ -25,6 +25,9 @@ export class NavbarComponent implements OnInit{
     return this.darkModeService.isDarkMode();
   }
 
+  signOut(){
+    localStorage.clear()
+  }
 
   
 }
